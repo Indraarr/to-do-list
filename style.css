@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 1em;
+}
+
+/* APP */
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-app h2 {
+  color: rgb(47, 17, 156);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 1.5em;
+  margin-left: 0.75em;
+}
+
+/* ADD */
+
+.add {
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  height: 3.5em;
+  border-radius: 50px;
+  margin: 0 0 1em;
+}
+
+.add input {
+  border: 0;
+  outline: 0;
+  height: 3.5em;
+  background-color: transparent;
+  padding-left: 2em;
+  flex: 1;
+}
+
+.add button {
+  border: 0;
+  outline: 0;
+  background-color: orangered;
+  color: white;
+  height: 100%;
+  width: 30%;
+  border-radius: 30px;
+  font-size: 1.25em;
+}
+
+.add button:hover {
+  background-color: rgb(255, 105, 50);
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1em;
+  padding: 1em 0.5em 1em 3em;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(assets/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+  top: 13px;
+}
+
+.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+.checked::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(assets/checked.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+  top: 13px;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background: #cdcdcd;
+}
